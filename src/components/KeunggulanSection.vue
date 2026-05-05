@@ -1,5 +1,6 @@
 <script setup>
 import FeatureCard from './FeatureCard.vue'
+// import keunggulanBg from '../assets/keunggulan2.png'
 
 const features = [
   {
@@ -22,12 +23,12 @@ const features = [
 </script>
 
 <template>
-  <section id="tentang" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+  <section id="keunggulan" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
     <div class="mb-12 text-center">
       <h2 class="text-3xl font-black text-slate-900">Keunggulan FastNet Untuk Kebutuhan Digital Keluarga</h2>
       <p class="mx-auto mt-4 max-w-2xl text-sm text-slate-600">Internet cepat, hiburan lengkap, gaming lancar, dan bantuan layanan setiap saat.</p>
     </div>
-    <div class="feature-grid grid gap-6 lg:grid-cols-4">
+    <div class="feature-grid grid gap-10 lg:grid-cols-4 image=src/assets/keunggulan2.png " >
       <FeatureCard v-for="feature in features" :key="feature.title" :feature="feature" />
     </div>
   </section>

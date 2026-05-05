@@ -4,22 +4,23 @@ import { ref } from 'vue'
 const menuOpen = ref(false)
 const navItems = [
   { label: 'Home', href: '#home' },
-  { label: 'Produk', href: '#produk' },
-  { label: 'Tentang Kami', href: '#tentang' },
-  { label: 'Keunggulan', href: '#keunggulan' }
+  { label: 'Produk', href: '#pricing' },
+  { label: 'Keunggulan', href: '#footer' },
+  { label: 'Tentang Kami', href: '#keunggulan' }
 ]
 
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value
 }
+import searchIcon from '../assets/search.png'
 </script>
 
 <template>
   <header class="sticky top-0 z-50 bg-red-600/95 backdrop-blur-md border-b border-white/10 shadow-2xl shadow-red-900/20">
-    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-1">
       <div class="flex items-center gap-3">
-        <div class="flex h-15 w-27 items-center justify-center rounded-[25px] bg-white shadow-sm ring-2 ring-white/40">
-          <img src="../assets/logo.png" alt="Logo" class="h-10 w-auto object-contain" />
+        <div class="flex h-12 w-30 items-center justify-center rounded-[10px] bg-white shadow-sm ring-1 ring-white/100">
+          <img src="../assets/logo.png" alt="Logo" class="h-90 w-auto object-contain"  />
         </div>
         <nav class="hidden md:flex items-center gap-4">
           <a
@@ -35,11 +36,7 @@ const toggleMenu = () => {
 
       <div class="hidden lg:flex flex-1 items-center justify-center">
         <div class="relative w-full max-w-md">
-          <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5">
-              <path fill="currentColor" d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm8.707 13.293-4.829-4.829A5.963 5.963 0 0 0 16 10a6 6 0 1 0-2 4.586l4.829 4.829a1 1 0 0 0 1.414-1.414Z"/>
-            </svg>
-          </span>
+          <img :src="searchIcon" alt="Search" class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5" />
           <input
             type="search"
             placeholder="Cari layanan"
@@ -79,11 +76,7 @@ const toggleMenu = () => {
       <div v-if="menuOpen" class="border-t border-white/10 bg-red-600/95 md:hidden">
         <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6">
           <div class="relative rounded-full border border-white/20 bg-white/95 px-4 py-2 shadow-sm">
-            <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5">
-                <path fill="currentColor" d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm8.707 13.293-4.829-4.829A5.963 5.963 0 0 0 16 10a6 6 0 1 0-2 4.586l4.829 4.829a1 1 0 0 0 1.414-1.414Z"/>
-              </svg>
-            </span>
+            <img :src="searchIcon" alt="Search" class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5" />
             <input
               type="search"
               placeholder="Cari layanan"

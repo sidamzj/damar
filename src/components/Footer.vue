@@ -1,18 +1,28 @@
+<script setup>
+import fbIcon from '../assets/f.png'
+import xIcon from '../assets/x.png'
+import youtubeIcon from '../assets/youtube.png'
+import igIcon from '../assets/ig.png'
+import appsIcon from '../assets/apps.png'
+import playIcon from '../assets/play.png' 
+</script>
+
 <template>
+  <section id="footer">
   <footer class="bg-gradient-to-r from-red-600 via-red-500 to-pink-500 text-white">
-    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
+    <div class="mx-auto grid max-w-7xl gap-40 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
       <div class="space-y-6">
         <h3 class="text-lg font-semibold">Download App</h3>
         <p class="text-sm text-white/80">Download Sekarang:</p>
-        <div class="grid gap-3">
-          <div class="rounded-3xl bg-white/15 px-4 py-3 text-sm font-semibold">App Store</div>
-          <div class="rounded-3xl bg-white/15 px-4 py-3 text-sm font-semibold">Google Play</div>
+        <div class="flex gap-5">
+          <img :src="appsIcon" alt="Facebook" class="h-10 w-38 rounded-1xl " />
+          <img :src="playIcon" alt="Google Play" class="h-10 w-38 rounded-1xl" />
         </div>
-        <div class="flex items-center gap-3">
-          <span class="h-10 w-10 rounded-2xl bg-white/20"></span>
-          <span class="h-10 w-10 rounded-2xl bg-white/20"></span>
-          <span class="h-10 w-10 rounded-2xl bg-white/20"></span>
-          <span class="h-10 w-10 rounded-2xl bg-white/20"></span>
+        <div class="flex items-center gap-5">
+          <img :src="fbIcon" alt="Facebook" class="h-10 w-10 rounded-2xl " />
+          <img :src="xIcon" alt="X" class="h-10 w-10 rounded-2xl" />
+          <img :src="youtubeIcon" alt="YouTube" class="h-10 w-10 rounded-2xl" />
+          <img :src="igIcon" alt="Instagram" class="h-10 w-10 rounded-2xl" />
         </div>
       </div>
 
@@ -47,4 +57,5 @@
       </div>
     </div>
   </footer>
+  </section>
 </template>
